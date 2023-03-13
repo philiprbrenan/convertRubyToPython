@@ -1,6 +1,7 @@
 #-------------------------------------------------------------------------------
 # Convert a ruby file to python
 #-------------------------------------------------------------------------------
+import os
 import sys
 import re
 
@@ -35,9 +36,12 @@ def convertRubyToPython(ruby) :                                                 
 
 if len(sys.argv) > 1:                                                           # Read file supplied as argument 1 on the command line
   f = sys.argv[1]
-  assert re.match(r"\.rb\Z", f), f"Ruby file required, not {f}"
+  assert re.search(r"\.rb\Z", f), f"Ruby file required, not ={f}="
   with open(f, "r") as i:                                                       # Read file
     ruby = i.readlines()
+
+  for lineI in range(len(ruby)):                                                # Spaces to tabs
+     ruby[lineI] = re.sub(os.linesep + r'\Z', '', ruby[lineI])
 
   python = convertRubyToPython(ruby)                                            # Convert
 
