@@ -6,7 +6,7 @@ Convert [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language)) [code]
 
 Try editing:
 [test.rb](https://github.com/philiprbrenan/convertRubyToPython/blob/main/test.rb)
-.  When you save this [file](https://en.wikipedia.org/wiki/Computer_file) back into [GitHub](https://github.com/philiprbrenan) observe that the action associated
-with this repo runs and updates:
+.  If you save this [file](https://en.wikipedia.org/wiki/Computer_file) back into [GitHub](https://github.com/philiprbrenan), the action associated
+with this repo will run and update:
 [test.py](https://github.com/philiprbrenan/convertRubyToPython/blob/main/test.py)
-.
+to match.
