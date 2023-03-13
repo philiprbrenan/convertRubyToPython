@@ -24,7 +24,7 @@ jobs:
 
     - name: Tree
       run: |
-        python3 convertRubyToPython.py test.rb
+        tree
 
     - name: Upload resulting python
       run: |
