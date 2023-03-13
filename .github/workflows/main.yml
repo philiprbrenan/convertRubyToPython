@@ -18,13 +18,13 @@ jobs:
       run: |
         sudo cpan -T -i GitHub::Crud Data::Table::Text
 
-    - name: Convert
-      run: |
-        python3 convertRubyToPython.py test.rb
-
     - name: Tree
       run: |
         tree
+
+    - name: Convert
+      run: |
+        python3 convertRubyToPython.py test.rb
 
     - name: Upload resulting python
       run: |
