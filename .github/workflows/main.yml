@@ -1,0 +1,27 @@
+# Test $d
+
+name: Test
+
+on:
+  push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: 'main'
+
+    - name: Cpan
+      run: |
+        sudo cpan -T -i GitHub::Crud Data::Table::Text
+
+    - name: Convert
+      run: |
+        python3 convertRubyToPython test.rb
+
+    - name: Upload  reulting python
+      run: |
+        GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl -M"GitHub::Crud" -e"GitHub::Crud::writeFileFromFileFromCurrentRun q(test.py);"
