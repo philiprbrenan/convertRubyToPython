@@ -20,7 +20,7 @@ jobs:
 
     - name: Convert
       run: |
-        python3 convertRubyToPython test.rb
+        python3 convertRubyToPython.py test.rb
 
     - name: Upload  reulting python
       run: |
