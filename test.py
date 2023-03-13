@@ -3,5 +3,4 @@ def aaa(a):
 		print b.upper()
 	elif (a["bb"] == b):
 		print b.lower()
-		print c.lower()
 
