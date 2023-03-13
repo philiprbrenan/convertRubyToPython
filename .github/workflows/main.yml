@@ -22,6 +22,6 @@ jobs:
       run: |
         python3 convertRubyToPython.py test.rb
 
-    - name: Upload  reulting python
+    - name: Upload resulting python
       run: |
         GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl -M"GitHub::Crud" -e"GitHub::Crud::writeFileFromFileFromCurrentRun q(test.py);"
