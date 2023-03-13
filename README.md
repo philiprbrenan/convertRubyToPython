@@ -1,5 +1,5 @@
-# Basic routines in C
+# convertRubyToPython
 
-![Test](https://github.com/philiprbrenan/basics/workflows/Test/badge.svg)
+![Test](https://github.com/philiprbrenan/rubyToPython/workflows/Test/badge.svg)
 
-Basic routines in C.
+Convert ruby [code](https://en.wikipedia.org/wiki/Computer_program) to [Python](https://www.python.org/) 
