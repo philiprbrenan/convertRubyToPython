@@ -1,9 +1,7 @@
 #-------------------------------------------------------------------------------
 # Convert a ruby file to python
 #-------------------------------------------------------------------------------
-import os
-import sys
-import re
+import os, re, sys
 
 def convertRubyToPython(ruby) :                                                 # Convert an attay of ruby to an array of python
   python = []                                                                   # The resulting python
@@ -25,7 +23,13 @@ def convertRubyToPython(ruby) :                                                 
 
     l = re.sub(r"\bupcase\b",   "upper()", l)                                   # upcase   to upper()
     l = re.sub(r"\bdowncase\b", "lower()", l)                                   # downcase to lower()
+    l = re.sub(r"\.push\b",     ".append", l)                                   # .push to .append
     l = re.sub(r"\bputs\b",     "print",   l)                                   # puts     to print
+    l = re.sub(r"\bnil\b",      "None",    l)                                   # nil to None
+    l = re.sub(r"\bfalse\b",    "False",   l)                                   # false to False
+    l = re.sub(r"\btrue\b",     "True",    l)                                   # true  to false
+    l = re.sub(r"#\{",          "{",       l)                                   # Format string content
+    l = re.sub(r'(\A[^"]*)"',  r'\1f"',    l)                                   # Format string
 
     if re.match("\A\s*end\s*\Z", l) :                                           # Remove end statements
       l = '';
@@ -57,7 +61,9 @@ def aaa(a)
   if (a[:aa] == b)
     puts b.upcase
   elsif (a[:bb] == b)
-    puts b.downcase
+    puts b.downcase, true, false, nil
+  else
+    puts("#{a} #{b}")
   end
 """.split("\n");
 
