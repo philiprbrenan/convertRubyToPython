@@ -1,6 +1,6 @@
 def aaa(a):
-	if (a["aa"] == b):
+	if (a[f"aa"] == b):
 		print b.upper()
-	elif (a["bb"] == b):
+	elif (a[f"bb"] == b):
 		print b.lower()
 
