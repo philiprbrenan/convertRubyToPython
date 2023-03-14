@@ -71,3 +71,7 @@ def aaa(a)
 
   for p in python:
     print(p)
+
+    with open("test.rb", "w") as o:
+      for r in ruby:
+        print(r, file=o)
